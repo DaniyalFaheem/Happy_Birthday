@@ -10,7 +10,7 @@ let musicPlaying = false;
 let audioContext = null;
 let loopTimeoutId = null;
 let currentPage = 0;
-const totalPages = 5;
+const totalPages = 4;
 let isTransitioning = false;
 
 // ===================================
@@ -383,53 +383,9 @@ function playHappyBirthday() {
 // Handled by next-page-btn in full-page navigation
 
 // ===================================
-// Birthday Countdown
+// Removed: Birthday Countdown
+// Countdown section removed per user request
 // ===================================
-function updateCountdown() {
-    let birthday = new Date('2026-01-24T00:00:00');
-    const now = new Date();
-    
-    if (now > birthday) {
-        birthday.setFullYear(birthday.getFullYear() + 1);
-    }
-    
-    const diff = birthday - now;
-    
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    
-    const countdownElement = document.getElementById('countdown-luxury');
-    if (countdownElement) {
-        if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
-            countdownElement.innerHTML = '<div class="celebration-message">🎉 Happy Birthday! 🎉</div>';
-            triggerConfetti();
-        } else {
-            countdownElement.innerHTML = `
-                <div class="countdown-item-luxury">
-                    <span class="countdown-value-luxury">${days}</span>
-                    <span class="countdown-label-luxury">Days</span>
-                </div>
-                <div class="countdown-item-luxury">
-                    <span class="countdown-value-luxury">${hours}</span>
-                    <span class="countdown-label-luxury">Hours</span>
-                </div>
-                <div class="countdown-item-luxury">
-                    <span class="countdown-value-luxury">${minutes}</span>
-                    <span class="countdown-label-luxury">Minutes</span>
-                </div>
-                <div class="countdown-item-luxury">
-                    <span class="countdown-value-luxury">${seconds}</span>
-                    <span class="countdown-label-luxury">Seconds</span>
-                </div>
-            `;
-        }
-    }
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
 
 // ===================================
 // Luxury Candles
