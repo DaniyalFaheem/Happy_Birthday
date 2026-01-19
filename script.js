@@ -55,8 +55,9 @@ function initFullPageNavigation() {
     });
     
     // Next page buttons
-    document.querySelectorAll('.next-page-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
+    document.querySelectorAll('.next-page-btn-romantic').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
             const nextPage = parseInt(btn.dataset.next);
             navigateToPage(nextPage);
         });
