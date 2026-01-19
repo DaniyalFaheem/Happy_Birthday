@@ -10,7 +10,7 @@ let musicPlaying = false;
 let audioContext = null;
 let loopTimeoutId = null;
 let currentPage = 0;
-const totalPages = 7;
+const totalPages = 5;
 let isTransitioning = false;
 
 // ===================================
