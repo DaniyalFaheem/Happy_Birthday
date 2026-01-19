@@ -15,7 +15,7 @@ A beautiful, fully responsive birthday website created with love for Maham.
 - 💌 **Flip Cards**: 6 romantic message cards with 3D flip animations
 - 🎥 **Video Gallery**: Carousel showcasing 4 special memory videos
 - ✉️ **Envelope Surprise**: Click to reveal a special letter
-- 🎵 **Music Player**: Background music controls (add your own music file)
+- 🎵 **Auto-Play Music**: "Happy Birthday to You" melody plays automatically using Web Audio API
 - 🎊 **Confetti**: Celebratory animations throughout
 
 ### Animations & Effects
@@ -40,15 +40,7 @@ A beautiful, fully responsive birthday website created with love for Maham.
 ### Quick Start
 1. Open `index.html` in any modern web browser
 2. The website will work immediately with all videos and features
-
-### Adding Background Music (Optional)
-1. Add an MP3, OGG, or WAV audio file to the root directory
-2. Name it `music.mp3` (or update the filename in `script.js`)
-3. Open `script.js` and uncomment line 73:
-   ```javascript
-   bgMusic.src = 'music.mp3';
-   ```
-4. Recommended: Keep file size under 5MB
+3. "Happy Birthday to You" melody will auto-play using Web Audio API (browser auto-play policies may require a user interaction like clicking on the page first)
 
 ### Customizing Messages
 Edit `index.html` to personalize:

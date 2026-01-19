@@ -205,70 +205,6 @@ body {
 }
 
 /* ===================================
-   Music Player
-   =================================== */
-.music-player {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 1000;
-}
-
-#music-toggle {
-    background: var(--gradient-primary);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 0.8rem 1.5rem;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    box-shadow: var(--shadow-lg);
-    transition: all var(--transition-fast);
-    min-height: 44px;
-}
-
-#music-toggle:hover {
-    transform: scale(1.05);
-    box-shadow: var(--shadow-glow);
-}
-
-#music-toggle:active {
-    transform: scale(0.98);
-}
-
-.music-icon {
-    font-size: 1.2rem;
-    animation: musicPulse 1s infinite;
-}
-
-#music-toggle.playing .music-icon {
-    animation: musicSpin 3s linear infinite;
-}
-
-@keyframes musicPulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-}
-
-@keyframes musicSpin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* ===================================
    Container & Common Styles
    =================================== */
 .container {
@@ -1391,7 +1327,6 @@ body {
     .loading-screen,
     .custom-cursor,
     .custom-cursor-dot,
-    .music-player,
     #particles-canvas,
     .scroll-indicator,
     .carousel-btn,

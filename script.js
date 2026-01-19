@@ -60,34 +60,109 @@ if (window.innerWidth >= 1025) {
 }
 
 // ===================================
-// Music Player
+// Happy Birthday Music Generator
 // ===================================
-const musicToggle = document.getElementById('music-toggle');
-const musicText = document.querySelector('.music-text');
+// Using Web Audio API to generate "Happy Birthday to You" melody
+let audioContext;
 
-// Create audio element (placeholder - user can add their own music file)
-// To add background music: 
-// 1. Add an MP3, OGG, or WAV file named 'music.mp3' to the root directory
-// 2. Uncomment the line below
-// 3. Recommended: Keep file size under 5MB for faster loading
-const bgMusic = new Audio();
-// bgMusic.src = 'music.mp3';
-bgMusic.loop = true;
-bgMusic.volume = 0.3;
+function createHappyBirthdayMelody() {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    
+    // Happy Birthday melody notes (in Hz)
+    // C4=261.63, D4=293.66, E4=329.63, F4=349.23, G4=392.00, A4=440.00, B4=493.88, C5=523.25
+    const melody = [
+        // "Happy birth-day to you" (first line)
+        { note: 261.63, duration: 0.3 }, // C (Happy)
+        { note: 261.63, duration: 0.3 }, // C (birth-)
+        { note: 293.66, duration: 0.6 }, // D (day)
+        { note: 261.63, duration: 0.6 }, // C (to)
+        { note: 349.23, duration: 0.6 }, // F (you)
+        { note: 329.63, duration: 1.2 }, // E (pause)
+        
+        // "Happy birth-day to you" (second line)
+        { note: 261.63, duration: 0.3 }, // C
+        { note: 261.63, duration: 0.3 }, // C
+        { note: 293.66, duration: 0.6 }, // D
+        { note: 261.63, duration: 0.6 }, // C
+        { note: 392.00, duration: 0.6 }, // G
+        { note: 349.23, duration: 1.2 }, // F
+        
+        // "Happy birth-day dear Maham" (third line)
+        { note: 261.63, duration: 0.3 }, // C
+        { note: 261.63, duration: 0.3 }, // C
+        { note: 523.25, duration: 0.6 }, // C5
+        { note: 440.00, duration: 0.6 }, // A
+        { note: 349.23, duration: 0.6 }, // F
+        { note: 329.63, duration: 0.6 }, // E
+        { note: 293.66, duration: 0.6 }, // D
+        { note: 0, duration: 0.3 }, // pause
+        
+        // "Happy birth-day to you" (final line)
+        { note: 466.16, duration: 0.3 }, // Bb
+        { note: 466.16, duration: 0.3 }, // Bb
+        { note: 440.00, duration: 0.6 }, // A
+        { note: 349.23, duration: 0.6 }, // F
+        { note: 392.00, duration: 0.6 }, // G
+        { note: 349.23, duration: 1.2 }  // F
+    ];
+    
+    let currentTime = audioContext.currentTime;
+    
+    melody.forEach(({ note, duration }) => {
+        if (note > 0) {
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(note, currentTime);
+            
+            // Envelope for smooth sound
+            gainNode.gain.setValueAtTime(0, currentTime);
+            gainNode.gain.linearRampToValueAtTime(0.15, currentTime + 0.05);
+            gainNode.gain.linearRampToValueAtTime(0.1, currentTime + duration - 0.05);
+            gainNode.gain.linearRampToValueAtTime(0, currentTime + duration);
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.start(currentTime);
+            oscillator.stop(currentTime + duration);
+        }
+        currentTime += duration;
+    });
+    
+    // Loop the melody
+    setTimeout(() => {
+        if (musicPlaying) {
+            createHappyBirthdayMelody();
+        }
+    }, currentTime * 1000 + 2000); // Add 2 second pause before repeating
+}
 
-musicToggle.addEventListener('click', () => {
-    if (musicPlaying) {
-        bgMusic.pause();
-        musicToggle.classList.remove('playing');
-        musicText.textContent = 'Play Music';
-        musicPlaying = false;
-    } else {
-        // Since we don't have a music file, we'll just show the playing state
-        // bgMusic.play();
-        musicToggle.classList.add('playing');
-        musicText.textContent = 'Pause Music';
+// Auto-play music after user interaction (required by browsers)
+function startMusic() {
+    if (!musicPlaying && !audioContext) {
         musicPlaying = true;
+        createHappyBirthdayMelody();
     }
+}
+
+// Start music when page loads (after loading screen)
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        // Try to play automatically
+        startMusic();
+        
+        // If auto-play is blocked, start on first user interaction
+        const startOnInteraction = () => {
+            startMusic();
+            document.removeEventListener('click', startOnInteraction);
+            document.removeEventListener('touchstart', startOnInteraction);
+        };
+        
+        document.addEventListener('click', startOnInteraction, { once: true });
+        document.addEventListener('touchstart', startOnInteraction, { once: true });
+    }, 2500); // Start after loading screen
 });
 
 // ===================================
