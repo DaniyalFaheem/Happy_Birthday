@@ -64,9 +64,12 @@ if (window.innerWidth >= 1025) {
 // ===================================
 // Using Web Audio API to generate "Happy Birthday to You" melody
 let audioContext;
+let loopTimeoutId = null;
 
 function createHappyBirthdayMelody() {
-    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    }
     
     // Happy Birthday melody notes (in Hz)
     // C4=261.63, D4=293.66, E4=329.63, F4=349.23, G4=392.00, A4=440.00, B4=493.88, C5=523.25
@@ -87,7 +90,7 @@ function createHappyBirthdayMelody() {
         { note: 392.00, duration: 0.6 }, // G
         { note: 349.23, duration: 1.2 }, // F
         
-        // "Happy birth-day dear Maham" (third line)
+        // "Happy birth-day dear Wifey" (third line)
         { note: 261.63, duration: 0.3 }, // C
         { note: 261.63, duration: 0.3 }, // C
         { note: 523.25, duration: 0.6 }, // C5
@@ -131,8 +134,13 @@ function createHappyBirthdayMelody() {
         currentTime += duration;
     });
     
+    // Clear any existing loop timeout to prevent accumulation
+    if (loopTimeoutId) {
+        clearTimeout(loopTimeoutId);
+    }
+    
     // Loop the melody
-    setTimeout(() => {
+    loopTimeoutId = setTimeout(() => {
         if (musicPlaying) {
             createHappyBirthdayMelody();
         }
@@ -141,7 +149,7 @@ function createHappyBirthdayMelody() {
 
 // Auto-play music after user interaction (required by browsers)
 function startMusic() {
-    if (!musicPlaying && !audioContext) {
+    if (!musicPlaying) {
         musicPlaying = true;
         createHappyBirthdayMelody();
     }
@@ -500,7 +508,7 @@ function updateCountdown() {
     const countdownElement = document.getElementById('countdown');
     if (countdownElement) {
         if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
-            countdownElement.innerHTML = '<div class="countdown-complete">🎉 Happy Birthday Maham! 🎉</div>';
+            countdownElement.innerHTML = '<div class="countdown-complete">🎉 Happy Birthday Wifey! ❤️ 🎉</div>';
             triggerConfetti();
         } else if (days === 0 && hours === 0 && minutes === 0) {
             countdownElement.innerHTML = `
@@ -592,5 +600,5 @@ videos.forEach(video => {
 // ===================================
 // Console Easter Egg
 // ===================================
-console.log('%c💝 Happy Birthday Maham! 💝', 'font-size: 30px; color: #ff69b4; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);');
+console.log('%c💝 Happy Birthday Wifey! ❤️ 💝', 'font-size: 30px; color: #ff69b4; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);');
 console.log('%cMade with ❤️ for the most wonderful wife in the world', 'font-size: 14px; color: #9d4edd; font-style: italic;');

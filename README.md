@@ -1,11 +1,11 @@
-# Happy Birthday Maham 💝
+# Happy Birthday Wifey ❤️ 💝
 
-A beautiful, fully responsive birthday website created with love for Maham.
+A beautiful, fully responsive birthday website created with love for my wonderful Wifey.
 
 ## 🎉 Features
 
 ### Personalization
-- **Personalized Name**: "Happy Birthday Maham"
+- **Personalized Name**: "Happy Birthday Wifey ❤️"
 - **Age Celebration**: Celebrating 22 Years of Your Beautiful Life!
 - **Birthday Countdown**: Live countdown to January 24th
 - **Romantic Messages**: Personalized love notes throughout the site
@@ -152,9 +152,9 @@ Edit the timeline items in `index.html` (lines 248-296)
 
 ## 💝 Made with Love
 
-This website was created with love and care to celebrate Maham's special day. Every animation, every color, and every word was chosen to create a memorable birthday experience.
+This website was created with love and care to celebrate Wifey's special day. Every animation, every color, and every word was chosen to create a memorable birthday experience.
 
 ---
 
-**Happy Birthday Maham! 🎉**
+**Happy Birthday Wifey! ❤️ 🎉**
 *January 24, 2026*
