@@ -66,8 +66,12 @@ const musicToggle = document.getElementById('music-toggle');
 const musicText = document.querySelector('.music-text');
 
 // Create audio element (placeholder - user can add their own music file)
+// To add background music: 
+// 1. Add an MP3, OGG, or WAV file named 'music.mp3' to the root directory
+// 2. Uncomment the line below
+// 3. Recommended: Keep file size under 5MB for faster loading
 const bgMusic = new Audio();
-// bgMusic.src = 'music.mp3'; // User can add their music file
+// bgMusic.src = 'music.mp3';
 bgMusic.loop = true;
 bgMusic.volume = 0.3;
 
@@ -403,7 +407,7 @@ envelope.addEventListener('click', () => {
 // Birthday Countdown
 // ===================================
 function updateCountdown() {
-    const birthday = new Date('2026-01-24T00:00:00');
+    let birthday = new Date('2026-01-24T00:00:00');
     const now = new Date();
     
     // If birthday has passed this year, set to next year
