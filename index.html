@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Happy Birthday Wifey - A Special Celebration for My Beautiful Wife">
+    <title>Happy Birthday Wifey ❤️ 💝</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Cursor (Desktop Only) -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-heart">💝</div>
+            <h2 class="loading-text">Preparing something special...</h2>
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-animation">
+                <h1 class="hero-title">
+                    <span class="hero-line morph-text">Happy Birthday</span>
+                    <span class="hero-line gradient-text">Wifey ❤️</span>
+                </h1>
+                <p class="hero-subtitle fade-in">To the love of my life, my everything 💕</p>
+                <div class="hero-age">
+                    <p class="age-text">Celebrating 22 Years of Your Beautiful Life! ✨</p>
+                </div>
+                <div class="hero-hearts">
+                    <span class="floating-heart">💝</span>
+                    <span class="floating-heart">💖</span>
+                    <span class="floating-heart">💗</span>
+                </div>
+            </div>
+            <button class="scroll-indicator" aria-label="Scroll down">
+                <span class="scroll-text">Scroll to explore</span>
+                <span class="scroll-arrow">↓</span>
+            </button>
+        </div>
+        <div id="confetti-container"></div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section" id="countdown-section">
+        <div class="container">
+            <h2 class="section-title reveal-text">Countdown to Wifey's Birthday 🎉</h2>
+            <p class="section-subtitle">January 24th - A Special Day for a Special Person</p>
+            <div id="countdown" class="countdown"></div>
+        </div>
+    </section>
+
+    <!-- Birthday Cake Section -->
+    <section class="cake-section" id="cake">
+        <div class="container">
+            <h2 class="section-title reveal-text">Make a Wish, Wifey! 🎂</h2>
+            <div class="cake-wrapper">
+                <div class="birthday-cake">
+                    <div class="cake-base">
+                        <div class="cake-layer layer-3"></div>
+                        <div class="cake-layer layer-2"></div>
+                        <div class="cake-layer layer-1"></div>
+                    </div>
+                    <div class="candles">
+                        <div class="candle" data-candle="1">
+                            <div class="flame"></div>
+                            <div class="wick"></div>
+                            <div class="wax"></div>
+                        </div>
+                        <div class="candle" data-candle="2">
+                            <div class="flame"></div>
+                            <div class="wick"></div>
+                            <div class="wax"></div>
+                        </div>
+                        <div class="candle" data-candle="3">
+                            <div class="flame"></div>
+                            <div class="wick"></div>
+                            <div class="wax"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="cake-instruction">Click the candles to blow them out! 🎉</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Messages Section -->
+    <section class="messages-section" id="messages">
+        <div class="container">
+            <h2 class="section-title reveal-text">Love Notes For You 💌</h2>
+            <div class="messages-grid">
+                <div class="message-card flip-card" data-card="1">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">💝</div>
+                            <h3>My Everything</h3>
+                            <p class="card-hint">Click to reveal</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="message-text">"You are the reason I smile every day, Wifey. Your love fills my heart with endless joy and makes every moment magical. Happy Birthday, my beautiful wife!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card flip-card" data-card="2">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">🌹</div>
+                            <h3>Forever Yours</h3>
+                            <p class="card-hint">Click to reveal</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="message-text">"Every day with you is a blessing. You make my life complete and my heart full. I'm so grateful to spend another year celebrating you."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card flip-card" data-card="3">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">✨</div>
+                            <h3>My Sunshine</h3>
+                            <p class="card-hint">Click to reveal</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="message-text">"Your smile lights up my world, Wifey. Your laughter is my favorite song, and your love is my greatest treasure. Happy Birthday to my sunshine!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card flip-card" data-card="4">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">💖</div>
+                            <h3>True Love</h3>
+                            <p class="card-hint">Click to reveal</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="message-text">"You are my best friend, my soulmate, and the love of my life. Thank you for being the most amazing partner anyone could ask for."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card flip-card" data-card="5">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">🎀</div>
+                            <h3>Beautiful Soul</h3>
+                            <p class="card-hint">Click to reveal</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="message-text">"Your kindness, beauty, and grace inspire me every single day. You make the world a better place just by being in it. I love you endlessly!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card flip-card" data-card="6">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">🌟</div>
+                            <h3>My Star</h3>
+                            <p class="card-hint">Click to reveal</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="message-text">"You shine brighter than all the stars in the sky, Wifey. Your love guides me, your strength supports me, and your heart completes me. Happy Birthday, my star!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="video-gallery" id="videos">
+        <div class="container">
+            <h2 class="section-title reveal-text">Our Beautiful Moments 🎥</h2>
+            <p class="section-subtitle">Relive our precious memories together</p>
+            
+            <div class="video-carousel">
+                <button class="carousel-btn prev" aria-label="Previous video">
+                    <span>‹</span>
+                </button>
+                
+                <div class="video-container">
+                    <div class="video-wrapper active" data-video="1">
+                        <video class="memory-video" controls preload="metadata">
+                            <source src="01.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-caption">Beautiful Memory #1</div>
+                    </div>
+                    
+                    <div class="video-wrapper" data-video="2">
+                        <video class="memory-video" controls preload="metadata">
+                            <source src="02.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-caption">Beautiful Memory #2</div>
+                    </div>
+                    
+                    <div class="video-wrapper" data-video="3">
+                        <video class="memory-video" controls preload="metadata">
+                            <source src="03.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-caption">Beautiful Memory #3</div>
+                    </div>
+                    
+                    <div class="video-wrapper" data-video="4">
+                        <video class="memory-video" controls preload="metadata">
+                            <source src="04.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-caption">Beautiful Memory #4</div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn next" aria-label="Next video">
+                    <span>›</span>
+                </button>
+            </div>
+            
+            <div class="video-dots">
+                <button class="dot active" data-slide="1" aria-label="Go to video 1"></button>
+                <button class="dot" data-slide="2" aria-label="Go to video 2"></button>
+                <button class="dot" data-slide="3" aria-label="Go to video 3"></button>
+                <button class="dot" data-slide="4" aria-label="Go to video 4"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2 class="section-title reveal-text">Our Journey Together 💕</h2>
+            <div class="timeline">
+                <div class="timeline-item left" data-timeline="1">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">💘</div>
+                        <h3>First Meeting</h3>
+                        <p>The day our eyes met and my heart knew you were the one. That magical moment changed my life forever.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right" data-timeline="2">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">💝</div>
+                        <h3>First Date</h3>
+                        <p>Our first date was perfect - full of laughter, deep conversations, and the beginning of countless beautiful memories.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left" data-timeline="3">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">💍</div>
+                        <h3>The Proposal</h3>
+                        <p>When you said yes, you made me the happiest person alive. I promised to love you forever, and I always will.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right" data-timeline="4">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">👰</div>
+                        <h3>Our Wedding</h3>
+                        <p>The most beautiful day of my life - the day I married my best friend and soulmate. Forever starts here.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item left" data-timeline="5">
+                    <div class="timeline-content">
+                        <div class="timeline-icon">🎉</div>
+                        <h3>Today</h3>
+                        <p>Celebrating another year of your beautiful life and our amazing journey together. Here's to many more birthdays, my love!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Envelope Surprise Section -->
+    <section class="envelope-section" id="surprise">
+        <div class="container">
+            <h2 class="section-title reveal-text">A Special Surprise 💌</h2>
+            <div class="envelope-wrapper">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body"></div>
+                    <div class="envelope-letter">
+                        <div class="letter-content">
+                            <h3>To My Beautiful Wifey ❤️,</h3>
+                            <p>Words cannot express how much you mean to me. You are my world, my everything, and the greatest blessing in my life.</p>
+                            <p>Every moment with you is a treasure, every day with you is a gift. Your love makes me a better person, and your smile makes everything worthwhile.</p>
+                            <p>On this special day, January 24th, I want you to know that my love for you grows stronger with each passing year. You are more beautiful, more amazing, and more precious to me today than ever before.</p>
+                            <p>Happy Birthday, Wifey! May all your dreams come true, and may this year bring you as much joy as you bring to my life every single day.</p>
+                            <p class="letter-signature">Forever yours,<br>With all my love ❤️</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="envelope-instruction">Click the envelope to open your surprise!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Message Section -->
+    <section class="final-section">
+        <div class="container">
+            <div class="final-message">
+                <h2 class="glowing-text">I Love You More Than Words Can Say 💝</h2>
+                <p class="final-quote">"In you, I've found the love of my life and my closest, truest friend."</p>
+                <div class="heart-burst">
+                    <span class="burst-heart">💕</span>
+                    <span class="burst-heart">💖</span>
+                    <span class="burst-heart">💗</span>
+                    <span class="burst-heart">💝</span>
+                    <span class="burst-heart">💘</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with 💖 for the most wonderful wife in the world</p>
+        <p class="footer-year">Happy Birthday 2026! 🎉</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
