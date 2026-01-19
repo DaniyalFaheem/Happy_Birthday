@@ -3,338 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Happy Birthday Wifey - A Special Celebration for My Beautiful Wife">
+    <meta name="description" content="Happy Birthday Wifey - A Luxury Celebration">
     <title>Happy Birthday Wifey ❤️ 💝</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&family=Cinzel:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Custom Cursor (Desktop Only) -->
-    <div class="custom-cursor"></div>
-    <div class="custom-cursor-dot"></div>
-
-    <!-- Loading Screen -->
-    <div class="loading-screen">
+    <!-- Luxury Loading Screen -->
+    <div class="luxury-loading">
         <div class="loading-content">
-            <div class="loading-heart">💝</div>
-            <h2 class="loading-text">Preparing something special...</h2>
-            <div class="loading-progress"></div>
+            <div class="luxury-logo">
+                <div class="logo-circle"></div>
+                <div class="logo-text">WIFEY</div>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-tagline">Preparing Your Luxury Experience</p>
         </div>
     </div>
 
-    <!-- Particle Background -->
-    <canvas id="particles-canvas"></canvas>
+    <!-- Elegant Navigation -->
+    <nav class="luxury-nav">
+        <div class="nav-logo">HBD ❤️</div>
+        <div class="nav-links">
+            <button class="nav-link" data-page="0">Home</button>
+            <button class="nav-link" data-page="1">Celebration</button>
+            <button class="nav-link" data-page="2">Messages</button>
+            <button class="nav-link" data-page="3">Letter</button>
+        </div>
+        <button class="music-toggle" aria-label="Toggle Music">
+            <span class="music-icon">♫</span>
+        </button>
+    </nav>
+    
+    <!-- Page Navigation Indicators -->
+    <div class="page-indicators">
+        <button class="page-dot active" data-page="0" aria-label="Page 1"></button>
+        <button class="page-dot" data-page="1" aria-label="Page 2"></button>
+        <button class="page-dot" data-page="2" aria-label="Page 3"></button>
+        <button class="page-dot" data-page="3" aria-label="Page 4"></button>
+    </div>
+    
+    <!-- Main Container for Full-Page Sections -->
+    <div class="fullpage-container">
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-animation">
-                <h1 class="hero-title">
-                    <span class="hero-line morph-text">Happy Birthday</span>
-                    <span class="hero-line gradient-text">Wifey ❤️</span>
-                </h1>
-                <p class="hero-subtitle fade-in">To the love of my life, my everything 💕</p>
-                <div class="hero-age">
-                    <p class="age-text">Celebrating 22 Years of Your Beautiful Life! ✨</p>
-                </div>
-                <div class="hero-hearts">
-                    <span class="floating-heart">💝</span>
-                    <span class="floating-heart">💖</span>
-                    <span class="floating-heart">💗</span>
-                </div>
+    
+    <!-- Main Container for Full-Page Sections -->
+    <div class="fullpage-container">
+    
+    <!-- Page 1: Romantic Hero -->
+    <section class="fullpage-section active" data-page="0">
+        <div class="romantic-hero">
+            <div class="romantic-bg-animation">
+                <div class="floating-heart heart-1">💗</div>
+                <div class="floating-heart heart-2">💕</div>
+                <div class="floating-heart heart-3">💖</div>
+                <div class="floating-heart heart-4">💝</div>
+                <div class="floating-heart heart-5">❤️</div>
+                <div class="floating-heart heart-6">💗</div>
+                <div class="rose-petal petal-1">🌹</div>
+                <div class="rose-petal petal-2">🌹</div>
+                <div class="rose-petal petal-3">🌹</div>
             </div>
-            <button class="scroll-indicator" aria-label="Scroll down">
-                <span class="scroll-text">Scroll to explore</span>
-                <span class="scroll-arrow">↓</span>
-            </button>
-        </div>
-        <div id="confetti-container"></div>
-    </section>
-
-    <!-- Countdown Section -->
-    <section class="countdown-section" id="countdown-section">
-        <div class="container">
-            <h2 class="section-title reveal-text">Countdown to Wifey's Birthday 🎉</h2>
-            <p class="section-subtitle">January 24th - A Special Day for a Special Person</p>
-            <div id="countdown" class="countdown"></div>
-        </div>
-    </section>
-
-    <!-- Birthday Cake Section -->
-    <section class="cake-section" id="cake">
-        <div class="container">
-            <h2 class="section-title reveal-text">Make a Wish, Wifey! 🎂</h2>
-            <div class="cake-wrapper">
-                <div class="birthday-cake">
-                    <div class="cake-base">
-                        <div class="cake-layer layer-3"></div>
-                        <div class="cake-layer layer-2"></div>
-                        <div class="cake-layer layer-1"></div>
+            <div class="hero-content-romantic">
+                <div class="hero-text-wrapper-romantic">
+                    <div class="birthday-badge">🎂 Happy Birthday 🎂</div>
+                    <h1 class="romantic-title">
+                        <span class="title-line-romantic">My Dearest</span>
+                        <span class="title-line-romantic signature-romantic">Wifey</span>
+                    </h1>
+                    <div class="hearts-divider">
+                        <span>💕</span>
+                        <span>❤️</span>
+                        <span>💕</span>
                     </div>
-                    <div class="candles">
-                        <div class="candle" data-candle="1">
-                            <div class="flame"></div>
-                            <div class="wick"></div>
-                            <div class="wax"></div>
-                        </div>
-                        <div class="candle" data-candle="2">
-                            <div class="flame"></div>
-                            <div class="wick"></div>
-                            <div class="wax"></div>
-                        </div>
-                        <div class="candle" data-candle="3">
-                            <div class="flame"></div>
-                            <div class="wick"></div>
-                            <div class="wax"></div>
-                        </div>
-                    </div>
+                    <p class="hero-subtitle-romantic">The Love of My Life, My Everything</p>
+                    <p class="hero-date-romantic">✨ January 24, 2026 ✨</p>
+                    <p class="hero-age-romantic">Celebrating 22 Beautiful Years</p>
                 </div>
-                <p class="cake-instruction">Click the candles to blow them out! 🎉</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Love Messages Section -->
-    <section class="messages-section" id="messages">
-        <div class="container">
-            <h2 class="section-title reveal-text">Love Notes For You 💌</h2>
-            <div class="messages-grid">
-                <div class="message-card flip-card" data-card="1">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-icon">💝</div>
-                            <h3>My Everything</h3>
-                            <p class="card-hint">Click to reveal</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p class="message-text">"You are the reason I smile every day, Wifey. Your love fills my heart with endless joy and makes every moment magical. Happy Birthday, my beautiful wife!"</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="message-card flip-card" data-card="2">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-icon">🌹</div>
-                            <h3>Forever Yours</h3>
-                            <p class="card-hint">Click to reveal</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p class="message-text">"Every day with you is a blessing. You make my life complete and my heart full. I'm so grateful to spend another year celebrating you."</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="message-card flip-card" data-card="3">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-icon">✨</div>
-                            <h3>My Sunshine</h3>
-                            <p class="card-hint">Click to reveal</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p class="message-text">"Your smile lights up my world, Wifey. Your laughter is my favorite song, and your love is my greatest treasure. Happy Birthday to my sunshine!"</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="message-card flip-card" data-card="4">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-icon">💖</div>
-                            <h3>True Love</h3>
-                            <p class="card-hint">Click to reveal</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p class="message-text">"You are my best friend, my soulmate, and the love of my life. Thank you for being the most amazing partner anyone could ask for."</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="message-card flip-card" data-card="5">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-icon">🎀</div>
-                            <h3>Beautiful Soul</h3>
-                            <p class="card-hint">Click to reveal</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p class="message-text">"Your kindness, beauty, and grace inspire me every single day. You make the world a better place just by being in it. I love you endlessly!"</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="message-card flip-card" data-card="6">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="card-icon">🌟</div>
-                            <h3>My Star</h3>
-                            <p class="card-hint">Click to reveal</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p class="message-text">"You shine brighter than all the stars in the sky, Wifey. Your love guides me, your strength supports me, and your heart completes me. Happy Birthday, my star!"</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Gallery Section -->
-    <section class="video-gallery" id="videos">
-        <div class="container">
-            <h2 class="section-title reveal-text">Our Beautiful Moments 🎥</h2>
-            <p class="section-subtitle">Relive our precious memories together</p>
-            
-            <div class="video-carousel">
-                <button class="carousel-btn prev" aria-label="Previous video">
-                    <span>‹</span>
-                </button>
-                
-                <div class="video-container">
-                    <div class="video-wrapper active" data-video="1">
-                        <video class="memory-video" controls preload="metadata">
-                            <source src="01.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-caption">Beautiful Memory #1</div>
-                    </div>
-                    
-                    <div class="video-wrapper" data-video="2">
-                        <video class="memory-video" controls preload="metadata">
-                            <source src="02.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-caption">Beautiful Memory #2</div>
-                    </div>
-                    
-                    <div class="video-wrapper" data-video="3">
-                        <video class="memory-video" controls preload="metadata">
-                            <source src="03.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-caption">Beautiful Memory #3</div>
-                    </div>
-                    
-                    <div class="video-wrapper" data-video="4">
-                        <video class="memory-video" controls preload="metadata">
-                            <source src="04.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-caption">Beautiful Memory #4</div>
-                    </div>
-                </div>
-                
-                <button class="carousel-btn next" aria-label="Next video">
-                    <span>›</span>
+                <button class="next-page-btn-romantic" data-next="1">
+                    <span class="next-text">Enter Celebration</span>
+                    <span class="next-arrow">💕</span>
                 </button>
             </div>
-            
-            <div class="video-dots">
-                <button class="dot active" data-slide="1" aria-label="Go to video 1"></button>
-                <button class="dot" data-slide="2" aria-label="Go to video 2"></button>
-                <button class="dot" data-slide="3" aria-label="Go to video 3"></button>
-                <button class="dot" data-slide="4" aria-label="Go to video 4"></button>
+        </div>
+    </section>
+
+    
+    <!-- Page 2: Romantic Birthday Cake -->
+    <section class="fullpage-section" data-page="1">
+        <div class="romantic-cake-section">
+            <div class="container-luxury">
+                <div class="section-header-romantic">
+                    <span class="section-label-romantic">🎂 Make A Wish 🎂</span>
+                    <h2 class="section-title-romantic">Your Special Day</h2>
+                    <div class="hearts-underline">
+                        <span>💕</span>
+                        <span class="heart-pulse">❤️</span>
+                        <span>💕</span>
+                    </div>
+                </div>
+                <div class="romantic-cake-wrapper">
+                    <div class="romantic-cake">
+                        <div class="cake-heart-decoration top-hearts">
+                            <span>💕</span>
+                            <span>💖</span>
+                            <span>💕</span>
+                        </div>
+                        <div class="cake-layers">
+                            <div class="cake-layer layer-1-romantic"></div>
+                            <div class="cake-layer layer-2-romantic"></div>
+                            <div class="cake-layer layer-3-romantic"></div>
+                        </div>
+                        <div class="luxury-candles">
+                            <div class="luxury-candle" data-candle="1">
+                                <div class="candle-flame"></div>
+                                <div class="candle-wick"></div>
+                                <div class="candle-body"></div>
+                            </div>
+                            <div class="luxury-candle" data-candle="2">
+                                <div class="candle-flame"></div>
+                                <div class="candle-wick"></div>
+                                <div class="candle-body"></div>
+                            </div>
+                        </div>
+                        <div class="cake-message">Happy Birthday My Love! 💝</div>
+                    </div>
+                    <p class="cake-instruction-romantic">💫 Click the candles and make your wish 💫</p>
+                </div>
+                <button class="next-page-btn-romantic" data-next="2">
+                    <span class="next-text">Continue</span>
+                    <span class="next-arrow">💕</span>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Timeline Section -->
-    <section class="timeline-section" id="timeline">
-        <div class="container">
-            <h2 class="section-title reveal-text">Our Journey Together 💕</h2>
-            <div class="timeline">
-                <div class="timeline-item left" data-timeline="1">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">💘</div>
-                        <h3>First Meeting</h3>
-                        <p>The day our eyes met and my heart knew you were the one. That magical moment changed my life forever.</p>
+    <!-- Page 3: Romantic Love Messages -->
+    <section class="fullpage-section" data-page="2">
+        <div class="romantic-messages">
+            <div class="container-luxury">
+                <div class="section-header-romantic">
+                    <span class="section-label-romantic">💌 From My Heart 💌</span>
+                    <h2 class="section-title-romantic">Love Notes For You</h2>
+                    <div class="hearts-underline">
+                        <span>💕</span>
+                        <span class="heart-pulse">❤️</span>
+                        <span>💕</span>
                     </div>
                 </div>
-                
-                <div class="timeline-item right" data-timeline="2">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">💝</div>
-                        <h3>First Date</h3>
-                        <p>Our first date was perfect - full of laughter, deep conversations, and the beginning of countless beautiful memories.</p>
+                <div class="messages-grid-luxury">
+                    <div class="luxury-message-card" data-card="1">
+                        <div class="card-glass">
+                            <div class="card-number">01</div>
+                            <div class="card-icon-luxury">💎</div>
+                            <h3 class="card-title-luxury">My Diamond</h3>
+                            <p class="card-message-luxury">You are the most precious gem in my life. Your beauty, inside and out, shines brighter than any diamond. Every moment with you is a treasure beyond measure.</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="timeline-item left" data-timeline="3">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">💍</div>
-                        <h3>The Proposal</h3>
-                        <p>When you said yes, you made me the happiest person alive. I promised to love you forever, and I always will.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item right" data-timeline="4">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">👰</div>
-                        <h3>Our Wedding</h3>
-                        <p>The most beautiful day of my life - the day I married my best friend and soulmate. Forever starts here.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item left" data-timeline="5">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">🎉</div>
-                        <h3>Today</h3>
-                        <p>Celebrating another year of your beautiful life and our amazing journey together. Here's to many more birthdays, my love!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Envelope Surprise Section -->
-    <section class="envelope-section" id="surprise">
-        <div class="container">
-            <h2 class="section-title reveal-text">A Special Surprise 💌</h2>
-            <div class="envelope-wrapper">
-                <div class="envelope" id="envelope">
-                    <div class="envelope-flap"></div>
-                    <div class="envelope-body"></div>
-                    <div class="envelope-letter">
-                        <div class="letter-content">
-                            <h3>To My Beautiful Wifey ❤️,</h3>
-                            <p>Words cannot express how much you mean to me. You are my world, my everything, and the greatest blessing in my life.</p>
-                            <p>Every moment with you is a treasure, every day with you is a gift. Your love makes me a better person, and your smile makes everything worthwhile.</p>
-                            <p>On this special day, January 24th, I want you to know that my love for you grows stronger with each passing year. You are more beautiful, more amazing, and more precious to me today than ever before.</p>
-                            <p>Happy Birthday, Wifey! May all your dreams come true, and may this year bring you as much joy as you bring to my life every single day.</p>
-                            <p class="letter-signature">Forever yours,<br>With all my love ❤️</p>
+                    <div class="luxury-message-card" data-card="2">
+                        <div class="card-glass">
+                            <div class="card-number">02</div>
+                            <div class="card-icon-luxury">👑</div>
+                            <h3 class="card-title-luxury">My Queen</h3>
+                            <p class="card-message-luxury">You rule my heart with grace and elegance. Your presence makes every day feel like royalty. I am forever grateful to be by your side, my queen.</p>
+                        </div>
+                    </div>
+
+                    <div class="luxury-message-card" data-card="3">
+                        <div class="card-glass">
+                            <div class="card-number">03</div>
+                            <div class="card-icon-luxury">✨</div>
+                            <h3 class="card-title-luxury">My Star</h3>
+                            <p class="card-message-luxury">You light up my darkest nights and guide me through life's journey. Your sparkle is unmatched, your radiance eternal. You are my guiding star.</p>
+                        </div>
+                    </div>
+
+                    <div class="luxury-message-card" data-card="4">
+                        <div class="card-glass">
+                            <div class="card-number">04</div>
+                            <div class="card-icon-luxury">🌹</div>
+                            <h3 class="card-title-luxury">My Rose</h3>
+                            <p class="card-message-luxury">Like a rose in full bloom, you embody beauty, grace, and strength. Your love perfumes my life with sweetness and joy. Forever my beautiful rose.</p>
+                        </div>
+                    </div>
+
+                    <div class="luxury-message-card" data-card="5">
+                        <div class="card-glass">
+                            <div class="card-number">05</div>
+                            <div class="card-icon-luxury">🎭</div>
+                            <h3 class="card-title-luxury">My Muse</h3>
+                            <p class="card-message-luxury">You inspire everything beautiful in my life. Your love is the art that colors my world. You are the poetry my heart writes every day.</p>
+                        </div>
+                    </div>
+
+                    <div class="luxury-message-card" data-card="6">
+                        <div class="card-glass">
+                            <div class="card-number">06</div>
+                            <div class="card-icon-luxury">💝</div>
+                            <h3 class="card-title-luxury">My Everything</h3>
+                            <p class="card-message-luxury">You are my past, present, and future. My love for you transcends time and space. Today and always, you are my everything, my eternal love.</p>
                         </div>
                     </div>
                 </div>
-                <p class="envelope-instruction">Click the envelope to open your surprise!</p>
+                <button class="next-page-btn-romantic" data-next="3">
+                    <span class="next-text">Read My Letter</span>
+                    <span class="next-arrow">💕</span>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Final Message Section -->
-    <section class="final-section">
-        <div class="container">
-            <div class="final-message">
-                <h2 class="glowing-text">I Love You More Than Words Can Say 💝</h2>
-                <p class="final-quote">"In you, I've found the love of my life and my closest, truest friend."</p>
-                <div class="heart-burst">
-                    <span class="burst-heart">💕</span>
-                    <span class="burst-heart">💖</span>
-                    <span class="burst-heart">💗</span>
-                    <span class="burst-heart">💝</span>
-                    <span class="burst-heart">💘</span>
+    <!-- Page 4: Romantic Love Letter -->
+    <section class="fullpage-section" data-page="3">
+        <div class="romantic-letter-section">
+            <div class="container-luxury">
+                <div class="section-header-romantic">
+                    <span class="section-label-romantic">💝 From The Depths Of My Heart 💝</span>
+                    <h2 class="section-title-romantic">My Love Letter To You</h2>
+                    <div class="hearts-underline">
+                        <span>💕</span>
+                        <span class="heart-pulse">❤️</span>
+                        <span>💕</span>
+                    </div>
+                </div>
+                
+                <div class="romantic-letter-container">
+                    <div class="romantic-letter-card">
+                        <div class="hearts-decoration">
+                            <span class="deco-heart">💕</span>
+                            <span class="deco-heart">💝</span>
+                            <span class="deco-heart">💖</span>
+                        </div>
+                        
+                        <div class="letter-romantic-content">
+                            <div class="romantic-greeting">My Dearest Wifey,</div>
+                            
+                            <div class="romantic-paragraphs">
+                                <p>Every moment I spend with you feels like a dream I never want to wake up from. You are the sunshine that brightens my darkest days, the melody that fills my heart with joy, and the love that makes my life complete.</p>
+                                
+                                <p>When I look into your eyes, I see my future, my happiness, and my forever. Your smile is the most beautiful sight in the world, and your laughter is the sweetest music to my ears. You make every ordinary moment extraordinary just by being you.</p>
+                                
+                                <p>On this special day, I want you to know that my love for you grows deeper with every heartbeat. You are not just my wife; you are my soulmate, my best friend, and my greatest blessing. Every day with you is a gift I treasure beyond words.</p>
+                                
+                                <p>Happy Birthday, my beautiful love! May this year bring you endless happiness, magical moments, and all the love your heart can hold. I promise to make every day special, to cherish every moment, and to love you more than yesterday but less than tomorrow.</p>
+                                
+                                <p>You are my everything, my forever, and my always. I fall in love with you more and more each day, and I can't wait to create countless more beautiful memories together.</p>
+                            </div>
+                            
+                            <div class="romantic-signature-area">
+                                <div class="romantic-closing">All my love, today and forever,</div>
+                                <div class="romantic-signature">Your Forever Love</div>
+                                <div class="signature-hearts">💗 ❤️ 💕 💝 💖</div>
+                                <div class="romantic-date">January 24, 2026</div>
+                            </div>
+                        </div>
+                        
+                        <div class="hearts-decoration bottom-hearts">
+                            <span class="deco-heart">💕</span>
+                            <span class="deco-heart">💝</span>
+                            <span class="deco-heart">💖</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Luxury Footer -->
+        <footer class="luxury-footer-inline">
+            <div class="footer-content">
+                <div class="footer-heart">❤️</div>
+                <p class="footer-message">Made with infinite love for the most extraordinary woman</p>
+                <p class="footer-date">January 24, 2026</p>
+                <div class="footer-divider"></div>
+                <p class="footer-signature">Happy Birthday, My Love</p>
+            </div>
+        </footer>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>Made with 💖 for the most wonderful wife in the world</p>
-        <p class="footer-year">Happy Birthday 2026! 🎉</p>
-    </footer>
+    
+    </div> <!-- End fullpage-container -->
 
     <script src="script.js"></script>
 </body>
