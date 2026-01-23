@@ -196,7 +196,7 @@ body {
     width: 100%;
     padding: 1.5rem 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 1000;
     background: rgba(10, 10, 10, 0.6);
@@ -216,45 +216,6 @@ body {
     color: var(--luxury-gold);
     font-weight: 700;
     letter-spacing: 0.1em;
-}
-
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-link {
-    font-family: var(--font-heading);
-    color: var(--luxury-pearl);
-    text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    position: relative;
-    transition: color 0.3s ease;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem 0;
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--luxury-gold);
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--luxury-gold);
-}
-
-.nav-link:hover::after {
-    width: 100%;
 }
 
 /* ===================================
@@ -1594,6 +1555,7 @@ body {
     z-index: 1;
     border-radius: 0 0 8px 8px;
     border-top: none;
+    position: relative;
 }
 
 .layer-3::before {
@@ -1610,7 +1572,7 @@ body {
 
 .luxury-candles {
     position: absolute;
-    top: 0;
+    top: -40px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -2630,10 +2592,6 @@ body {
         padding: 1rem 2rem;
     }
     
-    .nav-links {
-        gap: 1rem;
-    }
-    
     .timeline-luxury::before {
         left: 20px;
     }
@@ -2659,10 +2617,6 @@ body {
     
     .luxury-nav {
         padding: 1rem 1.5rem;
-    }
-    
-    .nav-links {
-        display: none;
     }
     
     .luxury-title {

@@ -38,14 +38,6 @@ window.addEventListener('load', () => {
 // Full-Page Navigation System
 // ===================================
 function initFullPageNavigation() {
-    // Navigation links
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            const pageIndex = parseInt(link.dataset.page);
-            navigateToPage(pageIndex);
-        });
-    });
-    
     // Page indicators
     document.querySelectorAll('.page-dot').forEach(dot => {
         dot.addEventListener('click', () => {
