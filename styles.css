@@ -7,29 +7,36 @@
    CSS Variables - Luxury Theme
    =================================== */
 :root {
-    /* Luxury Color Palette */
-    --luxury-gold: #D4AF37;
+    /* Ultra-Luxury Color Palette - Premium Enhancement */
+    --luxury-gold: #FFD700;
+    --luxury-dark-gold: #C9A961;
     --luxury-rose-gold: #B76E79;
     --luxury-champagne: #F7E7CE;
-    --luxury-black: #0A0A0A;
+    --luxury-black: #000000;
+    --luxury-deep-black: #0D0D0D;
     --luxury-white: #FFFFFF;
-    --luxury-cream: #FAF7F0;
+    --luxury-cream: #FFFEF7;
     --luxury-burgundy: #800020;
-    --luxury-navy: #1A1A2E;
-    --luxury-pearl: #E8E3D8;
-    --luxury-diamond: #B9F2FF;
+    --luxury-navy: #0A0A1E;
+    --luxury-pearl: #F8F6F0;
+    --luxury-diamond: #E3F4FF;
+    --luxury-platinum: #E5E4E2;
+    --luxury-bronze: #CD7F32;
     
-    /* Gradients */
-    --gradient-luxury: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #FFD700 50%, #FFA500 100%);
-    --gradient-rose: linear-gradient(135deg, #B76E79 0%, #E8B4BC 100%);
-    --gradient-dark: linear-gradient(135deg, #0A0A0A 0%, #1A1A2E 100%);
+    /* Premium Gradients - Enhanced Luxury */
+    --gradient-luxury: linear-gradient(135deg, #1a1a2e 0%, #0D0D0D 50%, #000000 100%);
+    --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FFA500 30%, #FFD700 60%, #C9A961 100%);
+    --gradient-rose: linear-gradient(135deg, #B76E79 0%, #E8B4BC 50%, #D4AF37 100%);
+    --gradient-dark: linear-gradient(135deg, #000000 0%, #0D0D0D 50%, #1A1A2E 100%);
     --gradient-shimmer: linear-gradient(90deg, 
         transparent 0%, 
-        rgba(255, 255, 255, 0.3) 50%, 
+        rgba(255, 215, 0, 0.4) 30%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 215, 0, 0.4) 70%, 
         transparent 100%);
-    --gradient-premium: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 50%, #1a1a2e 100%);
-    --gradient-diamond: linear-gradient(135deg, #B9F2FF 0%, #D4AF37 50%, #B9F2FF 100%);
+    --gradient-premium: linear-gradient(135deg, #000000 0%, #1a1a2e 25%, #2d1b4e 50%, #1a1a2e 75%, #000000 100%);
+    --gradient-diamond: linear-gradient(135deg, #E3F4FF 0%, #FFD700 25%, #FFFFFF 50%, #FFD700 75%, #E3F4FF 100%);
+    --gradient-metallic: linear-gradient(145deg, #E5E4E2 0%, #C9C9C9 25%, #F5F5F5 50%, #C9C9C9 75%, #E5E4E2 100%);
     
     /* Spacing */
     --space-xs: 0.5rem;
@@ -45,19 +52,24 @@
     --font-body: 'Montserrat', sans-serif;
     --font-script: 'Great Vibes', cursive;
     
-    /* Shadows & Effects */
-    --shadow-soft: 0 4px 30px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.15);
-    --shadow-luxury: 0 15px 60px rgba(0, 0, 0, 0.25);
-    --shadow-gold: 0 0 30px rgba(212, 175, 55, 0.4);
-    --shadow-inner: inset 0 2px 10px rgba(0, 0, 0, 0.1);
-    --shadow-glow-gold: 0 0 40px rgba(212, 175, 55, 0.6), 0 0 80px rgba(212, 175, 55, 0.3);
-    --shadow-glow-rose: 0 0 40px rgba(183, 110, 121, 0.5);
+    /* Premium Shadows & Effects - Enhanced Depth */
+    --shadow-soft: 0 4px 30px rgba(0, 0, 0, 0.15);
+    --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.25);
+    --shadow-luxury: 0 20px 80px rgba(0, 0, 0, 0.4);
+    --shadow-ultra-luxury: 0 30px 100px rgba(0, 0, 0, 0.5);
+    --shadow-gold: 0 0 40px rgba(255, 215, 0, 0.6), 0 0 80px rgba(255, 215, 0, 0.3);
+    --shadow-inner: inset 0 2px 15px rgba(0, 0, 0, 0.2);
+    --shadow-glow-gold: 0 0 60px rgba(255, 215, 0, 0.8), 0 0 120px rgba(255, 215, 0, 0.4), 0 0 180px rgba(255, 215, 0, 0.2);
+    --shadow-glow-rose: 0 0 50px rgba(183, 110, 121, 0.6), 0 0 100px rgba(183, 110, 121, 0.3);
+    --shadow-platinum: 0 0 40px rgba(229, 228, 226, 0.5), 0 0 80px rgba(229, 228, 226, 0.2);
     
-    /* Glass Morphism */
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-blur: blur(20px);
+    /* Premium Glass Morphism - Enhanced */
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-bg-dark: rgba(0, 0, 0, 0.3);
+    --glass-border: rgba(255, 215, 0, 0.3);
+    --glass-border-light: rgba(255, 255, 255, 0.2);
+    --glass-blur: blur(30px);
+    --glass-blur-heavy: blur(50px);
 }
 
 /* ===================================
@@ -77,8 +89,13 @@ html {
 
 body {
     font-family: var(--font-body);
-    background: var(--luxury-cream);
-    color: var(--luxury-black);
+    background: #000000;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(183, 110, 121, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(229, 228, 226, 0.05) 0%, transparent 50%),
+        linear-gradient(135deg, #000000 0%, #0D0D0D 50%, #1a1a2e 100%);
+    color: var(--luxury-white);
     line-height: 1.7;
     overflow-x: hidden;
     overflow-y: hidden; /* Disable scrolling */
@@ -199,15 +216,17 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.6);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .luxury-nav.scrolled {
-    background: rgba(10, 10, 10, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     padding: 1rem 3rem;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
 }
 
 .nav-logo {
@@ -215,7 +234,14 @@ body {
     font-size: 1.5rem;
     color: var(--luxury-gold);
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
+    text-shadow: var(--shadow-gold);
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover {
+    text-shadow: var(--shadow-glow-gold);
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -228,10 +254,10 @@ body {
     color: var(--luxury-pearl);
     text-decoration: none;
     font-size: 0.9rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     position: relative;
-    transition: color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background: transparent;
     border: none;
     cursor: pointer;
@@ -244,13 +270,16 @@ body {
     bottom: -5px;
     left: 0;
     width: 0;
-    height: 1px;
-    background: var(--luxury-gold);
-    transition: width 0.3s ease;
+    height: 2px;
+    background: var(--gradient-gold);
+    box-shadow: var(--shadow-gold);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover {
     color: var(--luxury-gold);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    transform: translateY(-2px);
 }
 
 .nav-link:hover::after {
@@ -259,23 +288,25 @@ body {
 
 .music-toggle {
     background: transparent;
-    border: 1px solid var(--luxury-gold);
+    border: 2px solid var(--luxury-gold);
     color: var(--luxury-gold);
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
+    font-size: 1.3rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
 }
 
 .music-toggle:hover {
     background: var(--luxury-gold);
     color: var(--luxury-black);
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(10deg);
+    box-shadow: var(--shadow-glow-gold);
 }
 
 /* ===================================
@@ -320,29 +351,32 @@ body {
     z-index: 1001;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .page-dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     border: 2px solid var(--luxury-gold);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
 }
 
 .page-dot:hover {
-    background: rgba(212, 175, 55, 0.5);
-    transform: scale(1.3);
+    background: rgba(255, 215, 0, 0.6);
+    transform: scale(1.4);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
 }
 
 .page-dot.active {
     background: var(--luxury-gold);
-    transform: scale(1.5);
-    box-shadow: var(--shadow-gold);
+    transform: scale(1.6);
+    box-shadow: var(--shadow-glow-gold);
+    border-width: 3px;
 }
 
 /* Next Page Button */
@@ -419,7 +453,11 @@ body {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #FFE4E9 0%, #FFF5F7 50%, #FFE4F1 100%);
+    background: #000000;
+    background-image: 
+        radial-gradient(circle at 30% 40%, rgba(255, 215, 0, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(183, 110, 121, 0.1) 0%, transparent 60%),
+        linear-gradient(135deg, #000000 0%, #0D0D0D 50%, #1a1a2e 100%);
 }
 
 .romantic-bg-animation {
@@ -436,7 +474,8 @@ body {
     position: absolute;
     font-size: 3rem;
     animation: floatHearts 10s ease-in-out infinite;
-    opacity: 0.3;
+    opacity: 0.25;
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
 }
 
 .floating-heart.heart-1 { left: 10%; top: 20%; animation-delay: 0s; }
@@ -449,11 +488,11 @@ body {
 @keyframes floatHearts {
     0%, 100% {
         transform: translateY(0) scale(1) rotate(0deg);
-        opacity: 0.3;
+        opacity: 0.2;
     }
     50% {
-        transform: translateY(-30px) scale(1.2) rotate(10deg);
-        opacity: 0.6;
+        transform: translateY(-40px) scale(1.3) rotate(15deg);
+        opacity: 0.5;
     }
 }
 
@@ -505,27 +544,30 @@ body {
 }
 
 .birthday-badge {
-    background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
-    color: white;
-    padding: 0.8rem 2rem;
+    background: var(--gradient-gold);
+    color: var(--luxury-black);
+    padding: 1rem 2.5rem;
     border-radius: 50px;
-    font-family: var(--font-body);
-    font-size: 1.2rem;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
     font-weight: 700;
     display: inline-block;
     margin-bottom: 2rem;
-    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
-    animation: badgePulse 2s ease-in-out infinite;
+    box-shadow: var(--shadow-glow-gold);
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    animation: badgePulse 3s ease-in-out infinite;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 @keyframes badgePulse {
     0%, 100% {
         transform: scale(1);
-        box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+        box-shadow: var(--shadow-gold);
     }
     50% {
         transform: scale(1.05);
-        box-shadow: 0 12px 35px rgba(255, 105, 180, 0.6);
+        box-shadow: var(--shadow-glow-gold);
     }
 }
 
@@ -536,15 +578,17 @@ body {
 .title-line-romantic {
     display: block;
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 700;
-    background: linear-gradient(135deg, #FF1493 0%, #FF69B4 50%, #FFB6C1 100%);
+    background: var(--gradient-gold);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: romanticGradientShift 4s ease-in-out infinite;
+    animation: romanticGradientShift 5s ease-in-out infinite;
     margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 60px rgba(255, 215, 0, 0.8);
 }
 
 @keyframes romanticGradientShift {
@@ -558,12 +602,12 @@ body {
 
 .title-line-romantic.signature-romantic {
     font-family: var(--font-script);
-    font-size: clamp(3.5rem, 8vw, 6rem);
-    background: linear-gradient(135deg, #FF1493 0%, #FF69B4 100%);
+    font-size: clamp(4rem, 8vw, 7rem);
+    background: var(--gradient-rose);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 0 40px rgba(255, 105, 180, 0.5);
+    filter: drop-shadow(0 0 50px rgba(255, 215, 0, 0.6));
 }
 
 .hearts-divider {
@@ -588,10 +632,11 @@ body {
 .hero-subtitle-romantic {
     font-family: var(--font-heading);
     font-size: clamp(1.3rem, 3vw, 2rem);
-    color: #FF1493;
+    color: var(--luxury-pearl);
     font-weight: 600;
     margin-bottom: 1rem;
     font-style: italic;
+    text-shadow: 0 2px 20px rgba(255, 215, 0, 0.3);
 }
 
 .hero-date-romantic {
@@ -605,32 +650,61 @@ body {
 .hero-age-romantic {
     font-family: var(--font-body);
     font-size: 1.1rem;
-    color: #C71585;
+    color: var(--luxury-rose-gold);
     margin-bottom: 2rem;
     font-weight: 600;
 }
 
+.hero-date {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--luxury-gold);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
 .next-page-btn-romantic {
     margin-top: 3rem;
-    padding: 1.2rem 3rem;
-    background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%);
-    color: white;
-    border: none;
+    padding: 1.3rem 3.5rem;
+    background: var(--gradient-gold);
+    color: var(--luxury-black);
+    border: 2px solid rgba(255, 215, 0, 0.5);
     border-radius: 50px;
-    font-family: var(--font-body);
+    font-family: var(--font-display);
     font-size: 1.1rem;
     font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 1rem;
-    transition: all 0.4s ease;
-    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-glow-gold);
+    position: relative;
+    overflow: hidden;
+}
+
+.next-page-btn-romantic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-shimmer);
+    transition: left 0.6s ease;
+}
+
+.next-page-btn-romantic:hover::before {
+    left: 100%;
 }
 
 .next-page-btn-romantic:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.6);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 0 80px rgba(255, 215, 0, 1), 0 0 120px rgba(255, 215, 0, 0.5);
 }
 
 .next-page-btn-romantic .next-arrow {
@@ -1076,12 +1150,12 @@ body {
 }
 
 .section-label {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    color: var(--luxury-rose-gold);
-    letter-spacing: 0.3em;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--luxury-gold);
+    letter-spacing: 0.35em;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     display: block;
     margin-bottom: 1rem;
     position: relative;
@@ -1090,27 +1164,28 @@ body {
 
 @keyframes shimmerText {
     0%, 100% {
-        text-shadow: 0 0 10px rgba(183, 110, 121, 0.5);
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
     }
     50% {
-        text-shadow: 0 0 20px rgba(183, 110, 121, 0.8), 0 0 30px rgba(212, 175, 55, 0.5);
+        text-shadow: 0 0 40px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 215, 0, 0.8);
     }
 }
 
 .section-title-luxury {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    color: var(--luxury-navy);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--luxury-white);
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     margin-bottom: 1rem;
     position: relative;
-    background: linear-gradient(135deg, #1a1a2e 0%, #D4AF37 50%, #1a1a2e 100%);
+    background: var(--gradient-gold);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: luxuryGradient 4s ease-in-out infinite;
+    animation: luxuryGradient 5s ease-in-out infinite;
+    text-shadow: 0 0 60px rgba(255, 215, 0, 0.8);
 }
 
 @keyframes luxuryGradient {
@@ -1484,7 +1559,10 @@ body {
    =================================== */
 .luxury-cake-section {
     padding: var(--space-xl) 0;
-    background: linear-gradient(180deg, var(--luxury-pearl) 0%, var(--luxury-champagne) 100%);
+    background: #000000;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.12) 0%, transparent 50%),
+        linear-gradient(135deg, #000000 0%, #0D0D0D 50%, #1a1a2e 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -1685,10 +1763,12 @@ body {
 
 .cake-instruction-luxury {
     font-family: var(--font-heading);
-    font-size: 1rem;
-    color: var(--luxury-rose-gold);
+    font-size: 1.1rem;
+    color: var(--luxury-gold);
     font-style: italic;
     text-align: center;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    letter-spacing: 0.05em;
 }
 
 /* ===================================
@@ -1696,7 +1776,11 @@ body {
    =================================== */
 .premium-messages {
     padding: var(--space-xl) 0;
-    background: var(--luxury-white);
+    background: #000000;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(183, 110, 121, 0.08) 0%, transparent 40%),
+        linear-gradient(135deg, #000000 0%, #0D0D0D 50%, #1a1a2e 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -1728,19 +1812,15 @@ body {
 }
 
 .card-glass {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(25px);
-    border: 2px solid transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
-                      linear-gradient(135deg, rgba(212, 175, 55, 0.4), rgba(183, 110, 121, 0.4));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: var(--glass-blur-heavy);
+    border: 2px solid rgba(255, 215, 0, 0.3);
     border-radius: 25px;
     padding: 3rem 2.5rem;
     position: relative;
     overflow: hidden;
-    box-shadow: var(--shadow-luxury);
-    transition: all 0.5s ease;
+    box-shadow: var(--shadow-ultra-luxury);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-glass::before {
@@ -1750,12 +1830,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        transparent
-    );
+    background: var(--gradient-shimmer);
     transition: left 0.8s ease;
 }
 
@@ -1764,10 +1839,11 @@ body {
 }
 
 .luxury-message-card:hover .card-glass {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.8);
     box-shadow: var(--shadow-glow-gold);
     border-color: var(--luxury-gold);
-    transform: rotateY(2deg);
+    border-width: 3px;
+    transform: rotateY(3deg) scale(1.02);
 }
 
 .card-number {
@@ -1799,7 +1875,24 @@ body {
     margin-bottom: 1.5rem;
     display: block;
     animation: iconRotate 4s ease-in-out infinite;
-    filter: drop-shadow(0 5px 15px rgba(212, 175, 55, 0.3));
+    filter: drop-shadow(0 10px 30px rgba(255, 215, 0, 0.6));
+}
+
+.card-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    animation: iconFloat 4s ease-in-out infinite;
+    filter: drop-shadow(0 10px 30px rgba(255, 215, 0, 0.6));
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.15);
+    }
 }
 
 @keyframes iconRotate {
@@ -1812,15 +1905,27 @@ body {
 }
 
 .card-title-luxury {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    background: linear-gradient(135deg, #1a1a2e 0%, #D4AF37 100%);
+    font-family: var(--font-display);
+    font-size: 2rem;
+    background: var(--gradient-gold);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 1.5rem;
     font-weight: 700;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
+}
+
+.card-text-luxury {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--luxury-pearl);
+    line-height: 1.9;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .card-message-luxury {
