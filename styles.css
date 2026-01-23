@@ -2266,7 +2266,6 @@ body {
 }
 
 /* Remove old formal letter styles */
-.premium-letter-section,
 .letter-container-proper,
 .letter-paper,
 .letter-watermark,
@@ -2281,6 +2280,14 @@ body {
 .letter-border-decoration {
     display: none;
 }
+
+.premium-letter-section {
+    padding: var(--space-xl) 0;
+    background: #000000;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+        linear-gradient(135deg, #000000 0%, #0D0D0D 50%, #1a1a2e 100%);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
