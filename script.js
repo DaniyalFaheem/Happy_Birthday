@@ -63,67 +63,6 @@ function initFullPageNavigation() {
         });
     });
     
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (isTransitioning) return;
-        
-        if (e.key === 'ArrowDown' || e.key === 'PageDown') {
-            e.preventDefault();
-            if (currentPage < totalPages - 1) {
-                navigateToPage(currentPage + 1);
-            }
-        } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
-            e.preventDefault();
-            if (currentPage > 0) {
-                navigateToPage(currentPage - 1);
-            }
-        }
-    });
-    
-    // Mouse wheel navigation
-    let wheelTimeout;
-    window.addEventListener('wheel', (e) => {
-        if (isTransitioning) return;
-        
-        clearTimeout(wheelTimeout);
-        wheelTimeout = setTimeout(() => {
-            if (e.deltaY > 0 && currentPage < totalPages - 1) {
-                navigateToPage(currentPage + 1);
-            } else if (e.deltaY < 0 && currentPage > 0) {
-                navigateToPage(currentPage - 1);
-            }
-        }, 100);
-    }, { passive: true });
-    
-    // Touch swipe navigation
-    let touchStartY = 0;
-    let touchEndY = 0;
-    
-    document.addEventListener('touchstart', (e) => {
-        touchStartY = e.changedTouches[0].screenY;
-    }, { passive: true });
-    
-    document.addEventListener('touchend', (e) => {
-        if (isTransitioning) return;
-        
-        touchEndY = e.changedTouches[0].screenY;
-        handleSwipe();
-    }, { passive: true });
-    
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = touchStartY - touchEndY;
-        
-        if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0 && currentPage < totalPages - 1) {
-                // Swipe up - next page
-                navigateToPage(currentPage + 1);
-            } else if (diff < 0 && currentPage > 0) {
-                // Swipe down - previous page
-                navigateToPage(currentPage - 1);
-            }
-        }
-    }
 }
 
 function navigateToPage(pageIndex) {
