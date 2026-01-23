@@ -412,27 +412,10 @@ function createConfetti(color) {
 }
 
 // ===================================
-// Luxury Envelope
+// Letter Paper (No envelope interaction needed)
 // ===================================
-const envelope = document.getElementById('luxuryEnvelope');
-const envelopeHint = document.querySelector('.envelope-hint');
+// Letter is now displayed directly without envelope animation
 
-if (envelope) {
-    envelope.addEventListener('click', () => {
-        envelope.classList.toggle('open');
-        
-        if (envelope.classList.contains('open')) {
-            if (envelopeHint) {
-                envelopeHint.textContent = 'Click to close';
-            }
-            setTimeout(() => triggerConfetti(), 500);
-        } else {
-            if (envelopeHint) {
-                envelopeHint.textContent = 'Click to open';
-            }
-        }
-    });
-}
 
 // ===================================
 // Intersection Observer for Animations
