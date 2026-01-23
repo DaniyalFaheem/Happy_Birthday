@@ -1,37 +1,110 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
+    <style>
+        :root {
+            --card-bg: #ffffff;
+            --card-border: #f2e9f5;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --card-shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.12);
+            --text-heading: #2d2142;
+            --text-body: #4b3b5c;
+            --accent: #f48fb1;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at 20% 20%, rgba(244, 143, 177, 0.2), transparent 35%),
+                        radial-gradient(circle at 80% 0%, rgba(131, 127, 255, 0.15), transparent 30%),
+                        #fff4fb;
+            color: var(--text-body);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 22px 22px 26px;
+            box-shadow: var(--card-shadow);
+            transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--card-shadow-hover);
+            border-color: rgba(244, 143, 177, 0.35);
+        }
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            margin: 0 0 12px;
+            font-size: 1.35rem;
+            color: var(--text-heading);
+        }
+
+        p {
+            margin: 0;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    <div class="card">
-        <div class="icon">💎</div>
-        <h2>My Diamond</h2>
-        <p>You shine brighter than any treasure in the world. Your beauty, both inside and out, is timeless and rare. Every facet of your soul sparkles with grace, and I am blessed to hold such a precious gem in my life.</p>
-    </div>
-    <div class="card">
-        <div class="icon">👑</div>
-        <h2>My Queen</h2>
-        <p>You carry yourself with such elegance and strength. Your presence commands my heart, and your kindness rules my world. I am honored to stand beside royalty, to love a woman who is both powerful and gentle.</p>
-    </div>
-    <div class="card">
-        <div class="icon">✨</div>
-        <h2>My Guiding Light</h2>
-        <p>In my darkest moments, you illuminate my path. Your smile outshines the brightest stars, and your laughter fills my universe with joy. You are the constellation I navigate by, my North Star, my forever direction home.</p>
-    </div>
-    <div class="card">
-        <div class="icon">🌹</div>
-        <h2>My Beautiful Rose</h2>
-        <p>Like a rose in perfect bloom, you embody beauty, elegance, and strength. Your touch is gentle, your fragrance intoxicating. Even among thorns of life's challenges, you remain graceful, resilient, and breathtakingly beautiful.</p>
-    </div>
-    <div class="card">
-        <div class="icon">💕</div>
-        <h2>My Soulmate</h2>
-        <p>You inspire the best version of me. Your love paints colors into my world I never knew existed. Every dream I chase, every goal I reach, is made sweeter knowing you believe in me. You are the poetry my heart writes every single day.</p>
-    </div>
-    <div class="card">
-        <div class="icon">💝</div>
-        <h2>My Everything</h2>
-        <p>You are my yesterday's sweetest memory, my today's greatest blessing, and my tomorrow's brightest promise. In your eyes, I see my forever. In your arms, I find my home. You are not just my love—you are my entire world.</p>
-    </div>
+    <main class="cards">
+        <div class="card">
+            <div class="icon">💎</div>
+            <h2>My Diamond</h2>
+            <p>You shine brighter than any treasure in the world. Your beauty, both inside and out, is timeless and rare. Every facet of your soul sparkles with grace, and I am blessed to hold such a precious gem in my life.</p>
+        </div>
+        <div class="card">
+            <div class="icon">👑</div>
+            <h2>My Queen</h2>
+            <p>You carry yourself with such elegance and strength. Your presence commands my heart, and your kindness rules my world. I am honored to stand beside royalty, to love a woman who is both powerful and gentle.</p>
+        </div>
+        <div class="card">
+            <div class="icon">✨</div>
+            <h2>My Guiding Light</h2>
+            <p>In my darkest moments, you illuminate my path. Your smile outshines the brightest stars, and your laughter fills my universe with joy. You are the constellation I navigate by, my North Star, my forever direction home.</p>
+        </div>
+        <div class="card">
+            <div class="icon">🌹</div>
+            <h2>My Beautiful Rose</h2>
+            <p>Like a rose in perfect bloom, you embody beauty, elegance, and strength. Your touch is gentle, your fragrance intoxicating. Even among thorns of life's challenges, you remain graceful, resilient, and breathtakingly beautiful.</p>
+        </div>
+        <div class="card">
+            <div class="icon">💕</div>
+            <h2>My Soulmate</h2>
+            <p>You inspire the best version of me. Your love paints colors into my world I never knew existed. Every dream I chase, every goal I reach, is made sweeter knowing you believe in me. You are the poetry my heart writes every single day.</p>
+        </div>
+        <div class="card">
+            <div class="icon">💝</div>
+            <h2>My Everything</h2>
+            <p>You are my yesterday's sweetest memory, my today's greatest blessing, and my tomorrow's brightest promise. In your eyes, I see my forever. In your arms, I find my home. You are not just my love—you are my entire world.</p>
+        </div>
+    </main>
 </body>
 </html>
