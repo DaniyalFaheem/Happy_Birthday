@@ -196,7 +196,7 @@ body {
     width: 100%;
     padding: 1.5rem 3rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     z-index: 1000;
     background: rgba(10, 10, 10, 0.6);
@@ -216,6 +216,55 @@ body {
     color: var(--luxury-gold);
     font-weight: 700;
     letter-spacing: 0.1em;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--luxury-pearl);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--luxury-gold);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--luxury-gold);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--luxury-gold);
+}
+
+.nav-link.active::after {
+    width: 100%;
 }
 
 /* ===================================
@@ -2624,6 +2673,19 @@ body {
     
     .luxury-nav {
         padding: 1rem 1.5rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.6rem;
+    }
+    
+    .nav-logo {
+        font-size: 1.2rem;
     }
     
     .luxury-title {
