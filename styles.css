@@ -257,27 +257,6 @@ body {
     width: 100%;
 }
 
-.music-toggle {
-    background: transparent;
-    border: 1px solid var(--luxury-gold);
-    color: var(--luxury-gold);
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
-
-.music-toggle:hover {
-    background: var(--luxury-gold);
-    color: var(--luxury-black);
-    transform: scale(1.1);
-}
-
 /* ===================================
    Full-Page Navigation System
    =================================== */
@@ -2859,7 +2838,6 @@ a:focus {
    =================================== */
 @media print {
     .luxury-nav,
-    .music-toggle,
     .scroll-down-luxury {
         display: none;
     }

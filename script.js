@@ -187,25 +187,10 @@ function initLuxuryParticles() {
 // Music Player - Happy Birthday Melody
 // ===================================
 function initMusicPlayer() {
-    const musicToggle = document.querySelector('.music-toggle');
-    if (!musicToggle) return;
-    
-    musicToggle.addEventListener('click', toggleMusic);
-    
-    // Auto-start music after first interaction
-    document.addEventListener('click', () => {
-        if (!musicPlaying && !audioContext) {
-            startMusic();
-        }
-    }, { once: true });
-}
-
-function toggleMusic() {
-    if (musicPlaying) {
-        stopMusic();
-    } else {
+    // Auto-start music after loading screen
+    setTimeout(() => {
         startMusic();
-    }
+    }, 500);
 }
 
 function startMusic() {
@@ -215,11 +200,6 @@ function startMusic() {
     
     musicPlaying = true;
     playHappyBirthday();
-    
-    const musicIcon = document.querySelector('.music-icon');
-    if (musicIcon) {
-        musicIcon.textContent = '♫';
-    }
 }
 
 function stopMusic() {
@@ -227,11 +207,6 @@ function stopMusic() {
     if (loopTimeoutId) {
         clearTimeout(loopTimeoutId);
         loopTimeoutId = null;
-    }
-    
-    const musicIcon = document.querySelector('.music-icon');
-    if (musicIcon) {
-        musicIcon.textContent = '♪';
     }
 }
 
