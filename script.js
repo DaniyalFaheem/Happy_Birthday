@@ -448,6 +448,9 @@ document.querySelectorAll('.luxury-message-card').forEach(card => {
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'translateY(0) scale(1)';
     });
+    
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'article');
 });
 
 // ===================================
