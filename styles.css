@@ -1717,14 +1717,14 @@ body {
 .candle-flame {
     width: 15px;
     height: 25px;
-    background: linear-gradient(to bottom, #FFD700 0%, #FF6347 100%);
+    background: linear-gradient(to bottom, #FFD700 0%, #FFA500 50%, #FF6347 100%);
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     position: absolute;
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
     animation: flameFlicker 0.3s infinite alternate;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 165, 0, 0.6);
 }
 
 .luxury-candle.blown .candle-flame {
@@ -2512,6 +2512,42 @@ body {
     animation: sealPulse 2s ease-in-out infinite;
 }
 
+.envelope-front-luxury {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: var(--gradient-gold);
+    border-radius: 15px;
+    box-shadow: var(--shadow-glow-gold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgba(255, 215, 0, 0.5);
+    z-index: 1;
+}
+
+.envelope-heart {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: sealPulse 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+}
+
+.envelope-details {
+    font-family: var(--font-script);
+    font-size: 1.5rem;
+    color: var(--luxury-black);
+    text-align: center;
+    font-weight: 600;
+}
+
+.envelope-details p {
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+}
+
 @keyframes sealPulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.15); }
@@ -2522,11 +2558,12 @@ body {
     top: 0;
     width: 100%;
     height: 150px;
-    background: linear-gradient(135deg, #E8B4BC 0%, #B76E79 100%);
+    background: var(--gradient-rose);
     clip-path: polygon(0 0, 50% 70%, 100% 0);
     transform-origin: top center;
     transition: transform 0.6s ease;
-    box-shadow: var(--shadow-medium);
+    box-shadow: var(--shadow-ultra-luxury);
+    border: 2px solid rgba(255, 215, 0, 0.3);
     z-index: 2;
 }
 
@@ -2539,15 +2576,45 @@ body {
     top: 40px;
     left: 5%;
     width: 90%;
-    background: var(--luxury-champagne);
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: var(--shadow-luxury);
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: var(--glass-blur);
+    border: 2px solid var(--luxury-gold);
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-glow-gold);
     transition: all 0.6s ease;
     opacity: 0;
     z-index: 1;
     max-height: 400px;
     overflow-y: auto;
+}
+
+.letter-luxury h3 {
+    font-family: var(--font-script);
+    font-size: 2rem;
+    color: var(--luxury-gold);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+.letter-luxury p {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--luxury-pearl);
+    line-height: 2;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+.letter-luxury .signature-luxury {
+    font-family: var(--font-script);
+    font-size: 1.8rem;
+    color: var(--luxury-rose-gold);
+    display: block;
+    margin-top: 2rem;
+    text-align: right;
+    filter: drop-shadow(0 0 20px rgba(183, 110, 121, 0.6));
 }
 
 .luxury-envelope.open .letter-luxury {
@@ -2586,9 +2653,13 @@ body {
 
 .envelope-hint {
     font-family: var(--font-heading);
-    font-size: 0.9rem;
-    color: var(--luxury-rose-gold);
+    font-size: 1rem;
+    color: var(--luxury-gold);
     font-style: italic;
+    text-align: center;
+    margin-top: 2rem;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    letter-spacing: 0.05em;
 }
 
 /* ===================================
