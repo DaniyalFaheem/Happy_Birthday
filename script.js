@@ -332,20 +332,20 @@ function playHappyBirthday() {
 // ===================================
 const candles = document.querySelectorAll('.luxury-candle');
 let blownCandles = 0;
+let candlesBlown = false;
 
 candles.forEach(candle => {
     candle.addEventListener('click', () => {
-        if (!candle.classList.contains('blown')) {
-            candle.classList.add('blown');
-            blownCandles++;
-            
-            if (blownCandles === candles.length) {
-                setTimeout(() => {
-                    triggerConfetti();
-                    updateCakeMessage();
-                }, 300);
-            }
-        }
+        if (candlesBlown) return;
+        
+        candles.forEach(c => c.classList.add('blown'));
+        blownCandles = candles.length;
+        candlesBlown = true;
+        
+        setTimeout(() => {
+            triggerConfetti();
+            updateCakeMessage();
+        }, 300);
     });
 });
 
