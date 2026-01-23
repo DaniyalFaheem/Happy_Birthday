@@ -1931,7 +1931,7 @@ body {
 .card-message-luxury {
     font-family: var(--font-body);
     font-size: 1rem;
-    color: var(--luxury-black);
+    color: var(--luxury-pearl);
     line-height: 1.9;
     font-style: italic;
     position: relative;
