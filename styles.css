@@ -1572,7 +1572,7 @@ body {
 
 .luxury-candles {
     position: absolute;
-    top: -40px;
+    top: -60px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -2170,7 +2170,7 @@ body {
 }
 
 .premium-letter-section {
-    padding: var(--space-xl) 0;
+    padding: 0;
     background: linear-gradient(180deg, #FFF5F7 0%, #FFE4E9 100%);
     min-height: 100vh;
     display: flex;
