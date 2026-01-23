@@ -137,33 +137,20 @@ function initLuxuryParticles() {
         }
         
         draw() {
-            // Create radial gradient for gold glow
-            const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
-            gradient.addColorStop(0, `rgba(255, 215, 0, ${this.opacity})`);
-            gradient.addColorStop(0.5, `rgba(255, 215, 0, ${this.opacity * 0.5})`);
-            gradient.addColorStop(1, `rgba(255, 215, 0, 0)`);
-            
-            ctx.fillStyle = gradient;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
-            ctx.fill();
-            
-            // Draw core particle
-            ctx.fillStyle = `rgba(255, 215, 0, ${this.opacity * 1.2})`;
+            ctx.fillStyle = `rgba(212, 175, 55, ${this.opacity})`;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
             
-            // Draw connection lines with gold color
+            // Draw connection lines
             particles.forEach(particle => {
                 const dx = this.x - particle.x;
                 const dy = this.y - particle.y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
                 
-                if (distance < 120) {
-                    const lineOpacity = 0.3 * (1 - distance / 120);
-                    ctx.strokeStyle = `rgba(255, 215, 0, ${lineOpacity})`;
-                    ctx.lineWidth = 1;
+                if (distance < 100) {
+                    ctx.strokeStyle = `rgba(212, 175, 55, ${0.2 * (1 - distance / 100)})`;
+                    ctx.lineWidth = 0.5;
                     ctx.beginPath();
                     ctx.moveTo(this.x, this.y);
                     ctx.lineTo(particle.x, particle.y);
@@ -383,8 +370,8 @@ function updateCakeMessage() {
 // Confetti Effect
 // ===================================
 function triggerConfetti() {
-    const colors = ['#FFD700', '#FFA500', '#E5E4E2', '#B76E79', '#C9A961', '#FFFFFF'];
-    const confettiCount = 150;
+    const colors = ['#D4AF37', '#B76E79', '#667eea', '#764ba2', '#f093fb'];
+    const confettiCount = 100;
     
     for (let i = 0; i < confettiCount; i++) {
         createConfetti(colors[Math.floor(Math.random() * colors.length)]);
@@ -394,8 +381,8 @@ function triggerConfetti() {
 function createConfetti(color) {
     const confetti = document.createElement('div');
     confetti.style.position = 'fixed';
-    confetti.style.width = '12px';
-    confetti.style.height = '12px';
+    confetti.style.width = '10px';
+    confetti.style.height = '10px';
     confetti.style.backgroundColor = color;
     confetti.style.left = Math.random() * window.innerWidth + 'px';
     confetti.style.top = '-20px';
@@ -403,8 +390,7 @@ function createConfetti(color) {
     confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
     confetti.style.pointerEvents = 'none';
     confetti.style.zIndex = '9999';
-    confetti.style.borderRadius = '3px';
-    confetti.style.boxShadow = `0 0 10px ${color}`;
+    confetti.style.borderRadius = '2px';
     
     document.body.appendChild(confetti);
     
