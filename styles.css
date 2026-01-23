@@ -602,8 +602,8 @@ body {
 .divider-luxury,
 .hero-subtitle-luxury,
 .hero-age-luxury,
-.next-page-btn {
-    display: none !important;
+.next-page-btn-romantic {
+    display: inline-flex !important;
 }
 
 /* ===================================
