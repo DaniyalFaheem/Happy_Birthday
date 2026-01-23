@@ -335,7 +335,7 @@ let blownCandles = 0;
 let candlesBlown = false;
 
 candles.forEach(candle => {
-    candle.addEventListener('click', () => {
+    const blowOut = () => {
         if (candlesBlown) return;
         
         candles.forEach(c => c.classList.add('blown'));
@@ -346,6 +346,14 @@ candles.forEach(candle => {
             triggerConfetti();
             updateCakeMessage();
         }, 300);
+    };
+    
+    candle.addEventListener('click', blowOut);
+    candle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            blowOut();
+        }
     });
 });
 
