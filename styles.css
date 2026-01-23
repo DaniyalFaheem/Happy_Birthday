@@ -2215,7 +2215,6 @@ body {
 
 /* Remove old formal letter styles */
 .letter-container-proper,
-.letter-paper,
 .letter-watermark,
 .letter-content-proper,
 .letter-date,
@@ -2270,48 +2269,7 @@ body {
     }
 }
 
-.letter-paper {
-    background: linear-gradient(to bottom, #FFFEF9 0%, #FFF9F0 100%);
-    border: 3px solid var(--luxury-gold);
-    border-radius: 20px;
-    padding: 4rem 3rem;
-    box-shadow: var(--shadow-luxury), 
-                inset 0 0 40px rgba(212, 175, 55, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.letter-paper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 8px;
-    background: repeating-linear-gradient(
-        90deg,
-        var(--luxury-gold) 0px,
-        var(--luxury-gold) 20px,
-        var(--luxury-rose-gold) 20px,
-        var(--luxury-rose-gold) 40px
-    );
-}
-
-.letter-paper::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 8px;
-    background: repeating-linear-gradient(
-        90deg,
-        var(--luxury-gold) 0px,
-        var(--luxury-gold) 20px,
-        var(--luxury-rose-gold) 20px,
-        var(--luxury-rose-gold) 40px
-    );
-}
+/* Old letter-paper styles removed - using new letter-paper design below */
 
 .letter-watermark {
     position: absolute;
@@ -2560,6 +2518,74 @@ body {
     color: var(--luxury-rose-gold);
     font-style: italic;
 }
+
+/* Letter Paper (without envelope) */
+.letter-paper {
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    background: var(--luxury-champagne);
+    border-radius: 10px;
+    padding: 3rem 2.5rem;
+    box-shadow: var(--shadow-luxury);
+    margin: 2rem auto;
+    animation: fadeInUp 0.8s ease;
+}
+
+.letter-header-decoration {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: sealPulse 2s ease-in-out infinite;
+}
+
+.letter-recipient {
+    font-family: var(--font-script);
+    font-size: 1.4rem;
+    color: var(--luxury-navy);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--luxury-rose-gold);
+    padding-bottom: 1rem;
+}
+
+.letter-content {
+    font-family: var(--font-heading);
+}
+
+.letter-content h3 {
+    font-family: var(--font-script);
+    font-size: 2rem;
+    color: var(--luxury-navy);
+    margin-bottom: 1.5rem;
+}
+
+.letter-content p {
+    font-size: 1.1rem;
+    color: var(--luxury-black);
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.letter-content .signature-luxury {
+    font-family: var(--font-script);
+    font-size: 1.6rem;
+    color: var(--luxury-rose-gold);
+    text-align: right;
+    margin-top: 2rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* ===================================
    Luxury Footer
