@@ -1,62 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Dearest Wifey</title>
-    <style>
-        body {
-            background-color: #ffccff; /* Pink theme */
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-        h1, h2, h3, p {
-            margin: 10px;
-        }
-        .card {
-            border: 1px solid #ff99cc;
-            padding: 10px;
-            margin: 5px;
-            background-color: #fff0f5;
-            border-radius: 8px;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .nav {
-            display: flex;
-            justify-content: space-around;
-            padding: 10px;
-            background-color: #ff99cc;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="nav">
-        <h1>HBD ❤️</h1>
-        <a href="#celebration">Celebration</a>
+    <!-- Loading Screen -->
+    <div class="luxury-loading">
+        <div class="luxury-logo">
+            <div class="logo-circle"></div>
+            <div class="logo-text">With Love</div>
+            <div class="loading-bar"><div class="loading-progress"></div></div>
+            <div class="loading-tagline">Celebrating You</div>
+        </div>
     </div>
-    <h1>My Dearest Wifey</h1>
-    <h2>The Love of My Life, My Everything</h2>
-    <h3>✨ January 24, 2026 ✨</h3>
-    <h3>Celebrating 22 Beautiful Years</h3>
-    <h2>Candles: 🎂🎂</h2>
-    <h3>🎂 Make A Wish 🎂</h3>
-    <section id="celebration">
-        <h2>Your Special Day</h2>
-        <div class="card">01. Card detail 1...</div>
-        <div class="card">02. Card detail 2...</div>
-        <div class="card">03. Card detail 3...</div>
-        <div class="card">04. Card detail 4...</div>
-        <div class="card">05. Card detail 5...</div>
-        <div class="card">06. Card detail 6...</div>
-    </section>
-    <p>My beloved, as we stand on the eve of your special day, I find myself overwhelmed with love and gratitude.</p>
-    <p>Your laughter is my favorite melody, and your happiness is my life's greatest treasure.</p>
-    <p>With each moment we share, my love for you only grows deeper.</p>
-    <p>You are truly my everything, and I look forward to spending countless years celebrating the joy you bring into my life.</p>
-    <p>Happy Birthday, my dearest wifey! May all your dreams come true today and always.</p>
-    <div class="footer">
-        <p>Made with infinite love for the most extraordinary woman</p>
-    </div>
+
+    <!-- Particle Canvas -->
+    <canvas id="luxury-particles" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <nav class="luxury-nav">
+        <div class="nav-logo" aria-label="Happy Birthday with love">HBD ❤️</div>
+        <div class="nav-links">
+            <button class="nav-link" data-page="0">Home</button>
+            <button class="nav-link" data-page="1">Celebration</button>
+            <button class="nav-link" data-page="2">Messages</button>
+            <button class="nav-link" data-page="3">Letter</button>
+        </div>
+        <button class="music-toggle" aria-label="Toggle music">
+            <span class="music-icon">♪</span>
+        </button>
+        </nav>
+
+        <!-- Page Indicators -->
+        <div class="page-indicators">
+            <button class="page-dot active" data-page="0" aria-label="Go to hero"></button>
+            <button class="page-dot" data-page="1" aria-label="Go to celebration"></button>
+            <button class="page-dot" data-page="2" aria-label="Go to messages"></button>
+            <button class="page-dot" data-page="3" aria-label="Go to letter"></button>
+        </div>
+
+        <main class="fullpage-container">
+        <!-- Hero -->
+        <section class="fullpage-section active romantic-hero" data-page="0">
+            <div class="romantic-bg-animation" aria-hidden="true">
+                <div class="floating-heart heart-1">💖</div>
+                <div class="floating-heart heart-2">💗</div>
+                <div class="floating-heart heart-3">💕</div>
+                <div class="floating-heart heart-4">💓</div>
+                <div class="floating-heart heart-5">💞</div>
+                <div class="floating-heart heart-6">💘</div>
+            </div>
+            <div class="hero-content-romantic">
+                <div class="hero-text-wrapper-romantic">
+                    <div class="birthday-badge" aria-label="Happy Birthday Wifey">My Dearest Wifey</div>
+                    <h1 class="romantic-title">
+                        <span class="title-line-romantic">The Love of My Life</span>
+                        <span class="title-line-romantic signature-romantic">My Everything</span>
+                    </h1>
+                    <p class="hero-date" aria-label="Birthday date">January 24, 2026</p>
+                    <p class="hero-subtitle-romantic">Celebrating 22 beautiful years of grace, joy, and endless love.</p>
+                    <button class="next-page-btn next-page-btn-romantic" data-next="1">
+                        Next chapter <span class="next-arrow">➜</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cake -->
+        <section class="fullpage-section luxury-cake-section" data-page="1">
+            <div class="container-luxury">
+                <div class="section-header-luxury">
+                    <p class="section-label">Make a wish</p>
+                    <h2 class="section-title-luxury">Blow the candles</h2>
+                </div>
+                <div class="luxury-cake-wrapper">
+                    <div class="luxury-cake">
+                        <div class="cake-layers">
+                            <div class="cake-layer layer-1"></div>
+                            <div class="cake-layer layer-2"></div>
+                            <div class="cake-layer layer-3"></div>
+                        </div>
+                        <div class="luxury-candles">
+                            <div class="luxury-candle" role="button" tabindex="0" aria-label="Blow out candle">
+                                <div class="candle-flame"></div>
+                                <div class="candle-wick"></div>
+                                <div class="candle-body"></div>
+                            </div>
+                            <div class="luxury-candle" role="button" tabindex="0" aria-label="Blow out candle">
+                                <div class="candle-flame"></div>
+                                <div class="candle-wick"></div>
+                                <div class="candle-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="cake-instruction-luxury">Tap the candles to blow them out ✨</p>
+                </div>
+                <button class="next-page-btn next-page-btn-romantic" data-next="2">
+                    Keep going <span class="next-arrow">➜</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Messages -->
+        <section class="fullpage-section premium-messages" data-page="2">
+            <div class="container-luxury">
+                <div class="section-header-luxury">
+                    <p class="section-label">Love Notes</p>
+                    <h2 class="section-title-luxury">For my Queen</h2>
+                </div>
+                <div class="premium-messages-grid">
+                    <div class="luxury-message-card">
+                        <div class="card-glass"></div>
+                        <div class="card-content">
+                            <div class="card-icon">💎</div>
+                            <h3 class="card-title-luxury">My Diamond</h3>
+                            <p class="card-text-luxury">Most precious gem in my life.</p>
+                        </div>
+                    </div>
+                    <div class="luxury-message-card">
+                        <div class="card-glass"></div>
+                        <div class="card-content">
+                            <div class="card-icon">👑</div>
+                            <h3 class="card-title-luxury">My Queen</h3>
+                            <p class="card-text-luxury">You rule my heart with grace.</p>
+                        </div>
+                    </div>
+                    <div class="luxury-message-card">
+                        <div class="card-glass"></div>
+                        <div class="card-content">
+                            <div class="card-icon">⭐</div>
+                            <h3 class="card-title-luxury">My Star</h3>
+                            <p class="card-text-luxury">You light up my darkest nights.</p>
+                        </div>
+                    </div>
+                    <div class="luxury-message-card">
+                        <div class="card-glass"></div>
+                        <div class="card-content">
+                            <div class="card-icon">🌹</div>
+                            <h3 class="card-title-luxury">My Rose</h3>
+                            <p class="card-text-luxury">Beauty, grace, and strength.</p>
+                        </div>
+                    </div>
+                    <div class="luxury-message-card">
+                        <div class="card-glass"></div>
+                        <div class="card-content">
+                            <div class="card-icon">🎭</div>
+                            <h3 class="card-title-luxury">My Muse</h3>
+                            <p class="card-text-luxury">You inspire everything beautiful.</p>
+                        </div>
+                    </div>
+                    <div class="luxury-message-card">
+                        <div class="card-glass"></div>
+                        <div class="card-content">
+                            <div class="card-icon">💝</div>
+                            <h3 class="card-title-luxury">My Everything</h3>
+                            <p class="card-text-luxury">My past, present, and future.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-page-btn next-page-btn-romantic" data-next="3">
+                    Final surprise <span class="next-arrow">➜</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Letter -->
+        <section class="fullpage-section premium-letter-section" data-page="3">
+            <div class="container-luxury premium-letter-wrapper">
+                <div class="section-header-luxury">
+                    <p class="section-label">Open Me</p>
+                    <h2 class="section-title-luxury">A special letter</h2>
+                </div>
+                <div class="luxury-envelope" id="luxuryEnvelope" aria-label="Open surprise letter">
+                    <div class="envelope-front-luxury">
+                        <div class="envelope-heart">❤️</div>
+                        <div class="envelope-details">
+                            <p>To my dearest Maham</p>
+                        </div>
+                    </div>
+                    <div class="envelope-flap-luxury"></div>
+                    <div class="letter-luxury">
+                        <h3>My Love,</h3>
+                        <p>From the first hello to this very moment, you have been my miracle. You fill every day with warmth, laughter, and a kind of magic only you can create.</p>
+                        <p>Happy 22nd birthday, my heart. On January 24, 2026 and forever after, I promise to cherish, protect, and celebrate you—today and all the days to come.</p>
+                        <p class="signature-luxury">— Your Forever Love</p>
+                    </div>
+                </div>
+                <p class="envelope-hint">Click to open</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
